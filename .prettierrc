@@ -1,0 +1,41 @@
+{
+  "printWidth": 80,
+  "tabWidth": 2,
+  "useTabs": false,
+  "semi": false,
+  "parser": "typescript",
+  "singleQuote": true,
+  "trailingComma": "none",
+  "bracketSpacing": true,
+  "arrowParens": "always",
+  "overrides": [
+    {
+      "files": ".prettierrc",
+      "options": { "parser": "json", "trailingComma": "none" }
+    },
+    {
+      "files": ".babelrc",
+      "options": { "parser": "json", "trailingComma": "none" }
+    },
+    {
+      "files": "*.ts",
+      "options": { "parser": "typescript", "trailingComma": "none" }
+    },
+    {
+      "files": "*.d.ts",
+      "options": { "parser": "typescript", "trailingComma": "none" }
+    },
+    {
+      "files": "*.tsx",
+      "options": { "parser": "typescript", "trailingComma": "none" }
+    },
+    {
+      "files": "*.json",
+      "options": { "parser": "json", "trailingComma": "none" }
+    },
+    {
+      "files": "*.less",
+      "options": { "parser": "css", "trailingComma": "all" }
+    }
+  ]
+}
