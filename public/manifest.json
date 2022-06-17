@@ -29,17 +29,17 @@
   "action": {
     "default_popup": "index.html",
     "default_icon": {
-      "16": "images/app.png",
-      "32": "images/app.png",
-      "48": "images/app.png",
-      "128": "images/app.png"
+      "16": "/images/app.png",
+      "32": "/images/app.png",
+      "48": "/images/app.png",
+      "128": "/images/app.png"
     },
     "default_title": "React CRX MV3"
   },
   "icons": {
-    "16": "images/app.png",
-    "32": "images/app.png",
-    "48": "images/app.png",
-    "128": "images/app.png"
+    "16": "/images/app.png",
+    "32": "/images/app.png",
+    "48": "/images/app.png",
+    "128": "/images/app.png"
   }
 }
