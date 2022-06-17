@@ -321,7 +321,8 @@ module.exports = function (webpackEnv) {
           'react-dom$': 'react-dom/profiling',
           'scheduler/tracing': 'scheduler/tracing-profiling'
         }),
-        ...(modules.webpackAliases || {})
+        ...(modules.webpackAliases || {}),
+        '@': path.join(__dirname, '..', 'src')
       },
       plugins: [
         // Prevents users from importing files from outside of src/ (or node_modules/).
@@ -342,7 +343,6 @@ module.exports = function (webpackEnv) {
     module: {
       strictExportPresence: true,
       rules: [
-        // Handle node_modules packages that contain sourcemaps
         shouldUseSourceMap && {
           enforce: 'pre',
           exclude: /@babel(?:\/|\\{1,2})runtime/,
@@ -552,9 +552,7 @@ module.exports = function (webpackEnv) {
               use: getStyleLoaders(
                 {
                   importLoaders: 3,
-                  sourceMap: isEnvProduction
-                    ? shouldUseSourceMap
-                    : isEnvDevelopment,
+                  sourceMap: true,
                   modules: {
                     mode: 'icss'
                   }
@@ -568,9 +566,7 @@ module.exports = function (webpackEnv) {
               use: getStyleLoaders(
                 {
                   importLoaders: 3,
-                  sourceMap: isEnvProduction
-                    ? shouldUseSourceMap
-                    : isEnvDevelopment,
+                  sourceMap: true,
                   modules: {
                     mode: 'local',
                     getLocalIdent: getCSSModuleLocalIdent

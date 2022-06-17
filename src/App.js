@@ -1,7 +1,7 @@
-// import './index.css'
+import '@/app.less'
 
 function App() {
-  return <div className="App">React-CRX-v3</div>
+  return <div className="app">React-CRX-v3</div>
 }
 
 export default App
